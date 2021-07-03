@@ -10,5 +10,20 @@
     <tr>
         <td>タイトル</td>
         <td>感想</td>
+        <% @books.each do |book| %>
+        <td><%= book.title%></td>
+        <td></td>
+        <td></td>
+        <% end %>
     </tr>
 </table>
+<h1>New Book</h1>
+<%= form_with model:@book, local:true do |f| %>
+    <p>Title</p>
+    <%= f.text_field:title %>
+    <p>Body</p>
+    <%= f.text_field:body %>
+    <div>
+        <%= f.submit "Create book" %>
+    </div>
+<% end %>
