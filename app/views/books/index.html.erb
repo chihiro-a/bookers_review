@@ -8,10 +8,10 @@
         <th></th>
     </tr>
     <tr>
-        <td>タイトル</td>
-        <td>感想</td>
         <% @books.each do |book| %>
         <td><%= book.title%></td>
+        <td><%= book.body %></td>
+        <td></td>
         <td></td>
         <td></td>
         <% end %>
